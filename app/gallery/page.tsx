@@ -5,8 +5,10 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 import { HouseLine, Bed, ForkKnife, Laptop, Dog, Bathtub } from 'phosphor-react';
+import { useState } from 'react';
 
 const roomTypes = [
     { name: 'Living Room', icon: HouseLine },
@@ -19,6 +21,19 @@ const roomTypes = [
 
 
 export default function Gallery() {
+    const [imagePairs, setImagePairs] = useState(Array.from({ length: 7 }, (_, i) => ({ id: i + 1, view: 'before' })));
+    const [hoverTimers, setHoverTimers] = useState({});
+
+    // Function to toggle the view state of an individual image pair
+    const toggleView = (id, nextView) => {
+        setImagePairs(currentPairs => 
+            currentPairs.map(pair => 
+                pair.id === id ? { ...pair, view: nextView } : pair
+            )
+        );
+    };
+    
+
     return (
         <div className="flex flex-col min-h-screen">
             <Head>
@@ -50,33 +65,34 @@ export default function Gallery() {
                             </button>
                         ))}
                     </div>
-                    <div className="relative">
-                        {/* Image gallery slider */}
-                        <div className="overflow-hidden">
-                            {/* Slider Items */}
-                            <div className="whitespace-nowrap transition-transform duration-300 ease-in-out">
-                                {/* Single Item */}
-                                <div className="inline-block align-top text-left p-4">
-                                    <div className="rounded-lg overflow-hidden shadow-lg">
-                                        <img
-                                            className="w-full h-64 md:h-96 object-cover"
-                                            src="/path-to-your-image.jpg"
-                                            alt="Virtual Staging Example"
-                                        />
-                                    </div>
+    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-32">
+                        {imagePairs.map((pair) => (
+                            <div key={pair.id} className="group relative w-full">                                
+                                <Image
+                                    src={`/gallery/${pair.view}/${pair.id}`}
+                                    alt={`${pair.view} staging ${pair.id}`}
+                                    width={500}
+                                    height={300}
+                                    layout="responsive"
+                                    className="rounded-lg border border-gray-300 transition duration-300 ease-in-out transform group-hover:scale-[1.02] hover:border-blue-500"
+                                />
+                                <div className="absolute top-0 left-0 p-4">
+                                    <button 
+                                        className={`mr-2 p-2 rounded ${pair.view === 'before' ? 'bg-gray-600 text-white' : 'bg-white'}`}
+                                        onClick={() => toggleView(pair.id, 'before')}
+                                    >
+                                        Before
+                                    </button>
+                                    <button 
+                                        className={`p-2 rounded ${pair.view === 'after' ? 'bg-gray-600 text-white' : 'bg-white'}`}
+                                        onClick={() => toggleView(pair.id, 'after')}
+                                    >
+                                        After
+                                    </button>
                                 </div>
-                                {/* ... more items ... */}
                             </div>
-                        </div>
-                        {/* Slider Controls */}
-                        <button className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow-md hover:bg-opacity-100 focus:outline-none">
-                            {/* Replace with an icon or text */}
-                            {'<'}
-                        </button>
-                        <button className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 shadow-md hover:bg-opacity-100 focus:outline-none">
-                            {/* Replace with an icon or text */}
-                            {'>'}
-                        </button>
+                        ))}
                     </div>
                 </section>
             </main>

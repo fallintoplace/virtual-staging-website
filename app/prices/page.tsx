@@ -7,43 +7,43 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const PricingCard = ({ title, price, features, highlighted }) => {
-  const buttonClasses = highlighted
-      ? 'bg-blue-700 text-white hover:bg-blue-800'
-      : 'bg-white text-gray-800 ring-2 hover:bg-gray-100';
+    const buttonClasses = highlighted
+        ? 'bg-blue-700 text-white hover:bg-blue-800'
+        : 'bg-white text-gray-800 ring-2 hover:bg-gray-100';
 
-  const cardClasses = highlighted
-      ? 'ring-2 ring-blue-500'
-      : 'bg-white';
+    const cardClasses = highlighted
+        ? 'ring-2 ring-blue-500'
+        : 'bg-white';
 
-  // Adding a conditional rendering for the best selling sign
-  const bestSellingSign = highlighted ? (
-      <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 rounded-bl-lg transform translate-x-2 -translate-y-2 shadow-xl">
+    // Adding a conditional rendering for the best selling sign
+    const bestSellingSign = highlighted ? (
+        <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 rounded-bl-lg transform translate-x-2 -translate-y-2 shadow-xl">
           Best Selling
-      </div>
-  ) : null;
+        </div>
+    ) : null;
 
-  return (
-      <div className={`relative p-6 max-w-sm rounded-lg border shadow-md transition-all duration-300 transform hover:scale-105 ${cardClasses} hover:shadow-xl`}>
-          {bestSellingSign}
-          <h3 className={`mb-4 text-xl font-semibold ${highlighted ? 'text-blue-900' : 'text-gray-800'}`}>{title}</h3>
-          <p className="text-4xl font-bold mb-4">${price}<span className="text-lg">/month</span></p>
-          <ul className="mb-8">
-              {features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center mb-2">
-                      <svg className="w-6 h-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                  </li>
-              ))}
-          </ul>
-          <Link href="/checkout" passHref>
-              <button className={`inline-block w-full py-3 px-6 text-center rounded-lg transition-colors ${buttonClasses}`}>
+    return (
+        <div className={`relative p-6 max-w-sm rounded-lg border shadow-md transition-all duration-300 transform hover:scale-105 ${cardClasses} hover:shadow-xl`}>
+            {bestSellingSign}
+            <h3 className={`mb-4 text-xl font-semibold ${highlighted ? 'text-blue-900' : 'text-gray-800'}`}>{title}</h3>
+            <p className="text-4xl font-bold mb-4">${price}<span className="text-lg">/month</span></p>
+            <ul className="mb-8">
+                {features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center mb-2">
+                        <svg className="w-6 h-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                    </li>
+                ))}
+            </ul>
+            <Link href="/checkout" passHref>
+                <button className={`inline-block w-full py-3 px-6 text-center rounded-lg transition-colors ${buttonClasses}`}>
                   Choose plan
-              </button>
-          </Link>
-      </div>
-  );
+                </button>
+            </Link>
+        </div>
+    );
 };
 
 

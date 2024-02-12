@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             
                     {/* Right-side links */}
                     <div className="flex items-center space-x-4">
-                        <Link href="/contact">
+                        <Link href="/prices">
                             <button className="text-gray-600 hover:text-gray-500 transition-colors">Contact</button>
                         </Link>
                         <Link href="/photos">
@@ -56,12 +56,12 @@ const Header: React.FC = () => {
                   My Photos
                             </button>
                         </Link>
-                        <Link href="/login">
+                        <Link href="/photos">
                             <button className="px-6 py-2 bg-white text-black rounded shadow hover:bg-gray-200 transition-colors">
                   Log In
                             </button>
                         </Link>
-                        <Link href="/signup">
+                        <Link href="/photos">
                             <button className="px-6 py-2 bg-black text-white rounded shadow hover:bg-gray-700 transition-colors">
                   Sign Up
                             </button>
