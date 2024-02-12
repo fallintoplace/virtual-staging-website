@@ -20,7 +20,7 @@ const roomTypes = [
 
 export default function Gallery() {
     return (
-        <div className="flex flex-col min-h-screen bg-gradient-to-b from-zinc-200 via-white to-white dark:from-zinc-800 dark:via-black dark:to-black">
+        <div className="flex flex-col min-h-screen">
             <Head>
                 <title>Virtual Staging AI</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -32,7 +32,7 @@ export default function Gallery() {
             <Header />
 
             <main className="flex-grow">
-                <section className="text-center py-12 md:py-24 min-h-screen bg-gradient-to-b from-zinc-200 via-white to-white">
+                <section className="text-center py-12 md:py-24 min-h-screen bg-gradient-to-br from-red-50 via-white to-white">
                     <h2 className="text-4xl font-bold text-gray-800 mb-3">
         Virtual Staging Transformations for Every Space
                     </h2>

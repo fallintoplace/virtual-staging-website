@@ -16,7 +16,9 @@ const roomTypes = ['Bedroom', 'Living Room', 'Kitchen', 'Bathroom', 'Dining Room
 const styles = ['Standard', 'Scandinavian', 'Coastal', 'Modern', 'Vintage', 'Rustic', 'Art Deco'];
 const colorSchemes = ['Bright', 'Monochrome', 'Pastel', 'Earth Tone', 'Vibrant'];
 
-const sortOptions = ['Date', 'Room Type', 'Style'];
+const originalOptions = ['Aggregate Original', 'Show Cluttered', 'Show Staged', 'Show All'];
+
+const sortOptions = ['Date', 'File Size', 'Rating'];
 const groupOptions = ['Property', 'Room Type', 'Style'];
 
 const Photos: NextPage = () => {
@@ -86,6 +88,24 @@ const Photos: NextPage = () => {
 
                         {/* Sort and Group Filters */}
                         <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-4 md:mt-0">
+                        <div>
+                                <label htmlFor="sort" className="sr-only">Aggregate level</label>
+                                <select
+                                    id="sort"
+                                    className="form-select block w-full p-2 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                                    value={sortCriteria}
+                                    onChange={(e) => {
+                                        setSortCriteria(e.target.value);
+                                        // Trigger sort functionality here if needed
+                                    }}
+                                >
+                                    <option value="">Aggregate level</option>
+                                    {originalOptions.map((option) => (
+                                        <option key={option} value={option.toLowerCase()}>{option}</option>
+                                    ))}
+                                </select>
+                            </div>
+
                             <div>
                                 <label htmlFor="sort" className="sr-only">Sort by</label>
                                 <select
@@ -291,6 +311,11 @@ const Photos: NextPage = () => {
                                 <option value="">All Photos</option>
                                 <option value="withFeedback">With Feedback</option>
                                 <option value="withoutFeedback">Without Feedback</option>
+                                <option value="0">0 🌟</option>
+                                <option value="1">1 🌟</option>
+                                <option value="2">2 🌟</option>
+                                <option value="3">3 🌟</option>
+
                             </select>
                         </div>
 

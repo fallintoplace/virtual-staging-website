@@ -1,12 +1,19 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image'; 
+import { Lightning, Heart, Lightbulb, CurrencyDollar } from 'phosphor-react';
 
 const Main: React.FC = () => {
     return (
         <>
             <main className="min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-blue-100 to-blue-50">
-                <h1 className="text-6xl font-bold transform transition duration-500 hover:scale-105 hover:text-shadow">
+                <div className="flex flex-col items-center  transform transition duration-500 hover:scale-105">
+                    <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-bold mb-2 inline-flex items-center shadow-lg">
+                        <span className="text-xs md:text-sm lg:text-base">🌟 <span className="font-semibold">New:</span> Research shows AI virtual staging boosts productivity.</span>
+                    </div>
+                </div>
+
+                <h1 className="text-6xl font-bold mt-8">
                     <span className="text-blue-600">Virtual Staging</span> with One-Click
                 </h1>
                 <p className="mt-3 text-2xl text-gray-600">
@@ -25,7 +32,28 @@ const Main: React.FC = () => {
                     <p className="mt-1 text-gray-500 text-sm">Endorsed by 5000+ Realtors</p>
 
                 </div>
-        
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+                    <div className="flex flex-col items-center">
+                        <Lightning size={24} color="#3b82f6" weight="fill" />
+                        <h3 className="text-lg font-semibold mt-2">Instant</h3>
+                        <p className="text-sm text-gray-600">Fast delivery at the click of a button.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <Heart size={24} color="#ec4899" weight="fill" />
+                        <h3 className="text-lg font-semibold mt-2">Gorgeous</h3>
+                        <p className="text-sm text-gray-600">Stunning visuals that impress.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <Lightbulb size={24} color="#fbbf24" weight="fill" />
+                        <h3 className="text-lg font-semibold mt-2">Creative</h3>
+                        <p className="text-sm text-gray-600">Innovative designs tailored to your space.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <CurrencyDollar size={24} color="#22c55e" weight="fill" />
+                        <h3 className="text-lg font-semibold mt-2">Inexpensive</h3>
+                        <p className="text-sm text-gray-600">Cost-effective solutions for every budget.</p>
+                    </div>
+                </div>
             </main>
         </>
     );
