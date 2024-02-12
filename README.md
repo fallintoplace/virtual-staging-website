@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Virtual Staging Website
+
+This is a Virtual Staging Web Application designed to transform real estate photos into beautifully staged homes. Built with [Next.js](https://nextjs.org/), this project leverages the power of modern web technologies to deliver a seamless and interactive user experience for virtual staging.
 
 ## Getting Started
 
