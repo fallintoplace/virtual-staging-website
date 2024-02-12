@@ -21,7 +21,7 @@ const Usp: React.FC = () => {
                             <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 transition duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Lowest price</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
-                            Starting at only <span className="font-bold text-green-600">$12/month</span> you can virtually stage 6 images. That’s cheaper than what most agencies charge for a single image. Enterprise plans go as low as $0.25 per staged picture.
+                            Starting at only <span className="font-bold text-green-600">$12/month</span> you can virtually stage 6 images. That&#39; cheaper than what most agencies charge for a single image. Enterprise plans go as low as $0.25 per staged picture.
                                 </p>
                             </div>
 
@@ -36,7 +36,7 @@ const Usp: React.FC = () => {
                             <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 transition duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Decluttering included</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
-                        If the rooms in your images are not entirely empty, we will <span className="font-bold text-green-600">remove existing furniture or clutter</span> for free. You'll receive both the decluttered image of the empty room and the staged image of the room.                        </p>
+                        If the rooms in your images are not entirely empty, we will <span className="font-bold text-green-600">remove existing furniture or clutter</span> for free. You&#39;ll receive both the decluttered image of the empty room and the staged image of the room.                        </p>
                             </div>
                             {/* Card 4 */}
                             <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 transition duration-300">
