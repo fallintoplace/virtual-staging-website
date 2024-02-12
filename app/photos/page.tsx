@@ -148,7 +148,7 @@ const Photos: NextPage = () => {
                         {mockPhotos.map((photo) => (
                             <div
                                 key={photo.id}
-                                className="overflow-hidden rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-102 hover:shadow-md hover:border hover:border-blue-600"
+                                className="overflow-hidden rounded-lg shadow-lg transition cursor-pointer duration-300 ease-in-out transform hover:scale-102 hover:shadow-md hover:border hover:border-blue-600"
                                 onClick={() => openModal(photo.url)}
                             >
                                 <Image
