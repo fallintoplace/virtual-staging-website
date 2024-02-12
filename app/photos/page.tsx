@@ -25,6 +25,8 @@ const Photos: NextPage = () => {
         roomType: '',
         style: '',
         colorScheme: '', 
+        dateFrom: Date,
+        dateTo: Date,
     });
     const applyFilters = () => {
     // Logic to apply filters to the photo list
@@ -36,7 +38,7 @@ const Photos: NextPage = () => {
     // }, [filter]);
 
     // State to manage which image is being viewed in the modal
-    const [viewingImage, setViewingImage] = useState(null);
+    const [viewingImage, setViewingImage] = useState<string>('');
 
     // State to manage the visibility of the modal
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,7 +47,7 @@ const Photos: NextPage = () => {
     const [groupCriteria, setGroupCriteria] = useState('');
 
     // Function to open the modal with the clicked image
-    const openModal = (imageUrl) => {
+    const openModal = (imageUrl: string) => {
         setViewingImage(imageUrl);
         setIsModalOpen(true);
     };
@@ -53,7 +55,7 @@ const Photos: NextPage = () => {
     // Function to close the modal
     const closeModal = () => {
         setIsModalOpen(false);
-        setViewingImage(null);
+        setViewingImage('');
     };
 
     return (
@@ -303,7 +305,6 @@ const Photos: NextPage = () => {
                             <button
                                 type="button"
                                 className="flex-grow bg-white hover:bg-gray-100 text-gray-800 font-medium rounded-lg text-sm px-5 py-2.5 border border-gray-300 transition duration-150 ease-in-out shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50"
-                                onClick={() => setFilter({ ...initialFilterState })}
                             >
         Clear
                             </button>
