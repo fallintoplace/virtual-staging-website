@@ -13,7 +13,7 @@ const Usp: React.FC = () => {
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-8">Why choose us?</h2>
                         <p className="text-gray-600 dark:text-gray-400 mb-8">
-            World's first virtual staging <span className="font-bold text-green-600">Algorithm</span> powered by <span className="font-bold text-green-600">Artificial Intelligence</span>. Developed at <span className="font-bold text-green-600">Harvard Innovation Labs</span>.
+            The best virtual staging <span className="font-bold text-green-600">Algorithm</span> powered by <span className="font-bold text-green-600">Artificial Intelligence</span>. Developed at <span className="font-bold text-green-600">Harvard Innovation Labs</span>.
                         </p>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
