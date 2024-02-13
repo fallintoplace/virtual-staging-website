@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { mockPhotos } from '../utils/mockPhotos';
 import { UploadSimple } from 'phosphor-react';
+import { List } from 'phosphor-react';
 
 // Define the filter options outside of the component to avoid re-declaration on re-renders
 const roomTypes = ['Bedroom', 'Living Room', 'Kitchen', 'Bathroom', 'Dining Room', 'Office'];
@@ -30,6 +31,12 @@ const Photos: NextPage = () => {
         dateFrom: Date,
         dateTo: Date,
     });
+        // Add a state for sidebar visibility
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    // Function to toggle sidebar
+    const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+
     const applyFilters = () => {
     // Logic to apply filters to the photo list
     // This should filter the `mockPhotos` based on the filter state
@@ -69,9 +76,9 @@ const Photos: NextPage = () => {
 
             <Header />
 
-            <div className="flex-grow flex px-8">
+            <div className="flex-grow flex flex-col md:flex-row">
         
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                         {/* Upload Button */}
                         <div>
@@ -177,9 +184,16 @@ const Photos: NextPage = () => {
                     )}
                 </div>
 
-                {/* Sidebar for filters */}
+                {/* Toggle Button for Mobile Sidebar */}
+                <button
+                    className="md:hidden p-2 bg-blue-600 text-white rounded-full shadow-lg fixed z-30 top-36 right-4 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 transition duration-200"
+                    onClick={toggleSidebar}
+                >
+                    <List size={32} />
+                </button>
 
-                <aside className="w-80 bg-slate-100 p-4 border-r rounded-lg border-gray-100 space-y-4">
+                {/* Sidebar for filters */}
+                <aside className={`transform top-4 left-0 w-full md:w-1/4 lg:w-1/5 bg-slate-100 p-4 border-r rounded-lg border-gray-100 space-y-4 fixed h-full overflow-auto z-20 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:flex md:flex-col transition-transform duration-300 ease-in-out`}>
                     <h2 className="text-xl font-semibold text-gray-900">Filters</h2>
                     <div className="space-y-2">
 
