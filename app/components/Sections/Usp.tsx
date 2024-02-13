@@ -11,7 +11,7 @@ const Usp: React.FC = () => {
             <main className="min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-blue-50 to-green-50">
                 <section className="py-12 px-4 text-center">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-8">Why choose us?</h2>
+                        <h2 className="text-4xl font-bold text-gray-800 mb-8">Why choose us?</h2>
                         <p className="text-gray-600 dark:text-gray-400 mb-8">
             The best virtual staging <span className="font-bold text-green-600">Algorithm</span> powered by <span className="font-bold text-green-600">Artificial Intelligence</span>. Developed at <span className="font-bold text-green-600">Harvard Innovation Labs</span>.
                         </p>

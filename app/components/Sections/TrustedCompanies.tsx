@@ -14,7 +14,7 @@ const companies = [
 
 const TrustedCompanies: React.FC = () => {
     return (
-        <section className="py-[80px]">
+        <section className="py-[80px] bg-white">
             <div className="container mx-auto px-6 text-center">
                 <h2 className="text-1xl font-semibold mb-8">Agents from all major brokerages use our service</h2>
                 <div className="flex justify-center items-center flex-wrap gap-8">
