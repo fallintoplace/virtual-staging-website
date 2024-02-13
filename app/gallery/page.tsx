@@ -66,7 +66,7 @@ export default function Gallery() {
                         ))}
                     </div>
     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-32">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
                         {imagePairs.map((pair) => (
                             <div key={pair.id} className="group relative w-full">                                
                                 <Image

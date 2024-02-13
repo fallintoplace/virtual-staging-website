@@ -3,7 +3,7 @@
 'use client'
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 type NavLinkProps = {
@@ -29,6 +29,8 @@ const NavLink: React.FC<NavLinkProps> = ({ href, text }) => {
 
   
 const Header: React.FC = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <header className="sticky top-0 bg-white bg-opacity-90 text-black shadow-sm z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,7 +41,10 @@ const Header: React.FC = () => {
                         <Link href="/">
                             <button className="text-2xl font-bold text-blue-900 hover:text-blue-500 transition-colors">Virtual Staging AI</button>
                         </Link>
-                        <nav className="space-x-4">
+                        <button className="text-3xl md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                            &#9776;
+                        </button>
+                        <nav className={`md:flex md:space-x-4 ${isMenuOpen ? 'block' : 'hidden md:block'}`}>
                             <NavLink href="/" text="Home" />
                             <NavLink href="/gallery" text="Gallery" />
                             <NavLink href="/prices" text="Prices" />
@@ -47,7 +52,7 @@ const Header: React.FC = () => {
                     </div>
             
                     {/* Right-side links */}
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden md:flex items-center space-x-4">
                         <Link href="/prices">
                             <button className="text-gray-600 hover:text-gray-500 transition-colors">Contact</button>
                         </Link>
