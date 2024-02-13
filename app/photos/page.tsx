@@ -76,9 +76,9 @@ const Photos: NextPage = () => {
 
             <Header />
 
-            <div className="flex-grow flex flex-col md:flex-row">
+            <div className="flex-grow bg-white flex px-4 sm:px-6 md:px-8 lg:px-16 xl:px-32">
         
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
+                <div className="container bg-white mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-8">
                         {/* Upload Button */}
                         <div>
@@ -193,7 +193,7 @@ const Photos: NextPage = () => {
                 </button>
 
                 {/* Sidebar for filters */}
-                <aside className={`transform top-4 left-0 w-full md:w-1/4 lg:w-1/5 bg-slate-100 p-4 border-r rounded-lg border-gray-100 space-y-4 fixed h-full overflow-auto z-20 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:flex md:flex-col transition-transform duration-300 ease-in-out`}>
+                <aside className={`transform top-4 left-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-slate-100 p-4 border-r rounded-lg border-gray-100 space-y-4 fixed h-full overflow-auto z-20 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:static md:flex md:flex-col transition-transform duration-300 ease-in-out`}>
                     <h2 className="text-xl font-semibold text-gray-900">Filters</h2>
                     <div className="space-y-2">
 
@@ -251,28 +251,27 @@ const Photos: NextPage = () => {
 
 
                         {/* Date Range Filter */}
-                        <div>
-                            <div className="flex gap-2">
-                                <div className="flex-1">
-                                    <label htmlFor="dateFrom" className="block text-sm font-medium text-gray-700">Date From</label>
-                                    <input
-                                        type="date"
-                                        id="dateFrom"
-                                        className="block w-full p-2 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-                                        value={filter.dateFrom}
-                                        onChange={(e) => setFilter({ ...filter, dateFrom: e.target.value })}
-                                    />
-                                </div>
-                                <div className="flex-1">
-                                    <label htmlFor="dateTo" className="block text-sm font-medium text-gray-700">Date To</label>
-                                    <input
-                                        type="date"
-                                        id="dateTo"
-                                        className="block w-full p-2 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-                                        value={filter.dateTo}
-                                        onChange={(e) => setFilter({ ...filter, dateTo: e.target.value })}
-                                    />
-                                </div>
+                        <div className="flex flex-wrap -mx-2">
+                            <div className="w-full px-2">                                <div className="flex-1">
+                                <label htmlFor="dateFrom" className="block text-sm font-medium text-gray-700">Date From</label>
+                                <input
+                                    type="date"
+                                    id="dateFrom"
+                                    className="block w-full p-2 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                                    value={filter.dateFrom}
+                                    onChange={(e) => setFilter({ ...filter, dateFrom: e.target.value })}
+                                />
+                            </div>
+                            <div className="flex-1">
+                                <label htmlFor="dateTo" className="block text-sm font-medium text-gray-700">Date To</label>
+                                <input
+                                    type="date"
+                                    id="dateTo"
+                                    className="block w-full p-2 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                                    value={filter.dateTo}
+                                    onChange={(e) => setFilter({ ...filter, dateTo: e.target.value })}
+                                />
+                            </div>
                             </div>
                         </div>
                         <div className="">
