@@ -6,7 +6,11 @@ import { Lightning, Heart, Lightbulb, CurrencyDollar } from 'phosphor-react';
 const Main: React.FC = () => {
     return (
         <>
-            <main className="min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-blue-100 to-blue-50">
+            <main className="relative min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-blue-100 to-blue-50">
+                <div className="absolute bottom-0 right-0 w-1/3 h-1/3 -z-10 opacity-75">
+                    <Image src="/landing/arrow_preview.webp" alt="Background" layout="fill" objectFit="cover" quality={100} />
+                </div>
+
                 <div className="flex flex-col items-center  transform transition duration-500 hover:scale-105">
                     <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-bold mb-2 inline-flex items-center shadow-lg">
                         <span className="text-xs md:text-sm lg:text-base">🌟 <span className="font-semibold">New:</span> Research shows AI virtual staging boosts productivity.</span>
