@@ -22,7 +22,6 @@ const roomTypes = [
 
 export default function Gallery() {
     const [imagePairs, setImagePairs] = useState(Array.from({ length: 7 }, (_, i) => ({ id: i + 1, view: 'before' })));
-    const [hoverTimers, setHoverTimers] = useState({});
 
     // Function to toggle the view state of an individual image pair
     const toggleView = (id, nextView) => {

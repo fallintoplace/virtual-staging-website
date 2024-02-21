@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Usp from './Sections/Usp';
 import Main from './Sections/Main';
 import TrustedCompanies from './Sections/TrustedCompanies';
+import UploadFeature from './Sections/UploadFeature';
 
 const HomePage: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage: React.FC = () => {
             <Main/>
 
             <Usp/>
+            <UploadFeature/>
             <TrustedCompanies/>
 
 
