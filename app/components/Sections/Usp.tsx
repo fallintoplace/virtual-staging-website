@@ -8,7 +8,7 @@ const Usp: React.FC = () => {
 
             {/* USP Section */}
 
-            <main className="min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-blue-50 to-green-50">
+            <main className="min-h-[800px] flex flex-col items-center justify-center px-20 text-center z-10 bg-gradient-to-b from-green-50 to-green-100">
                 <section className="py-12 px-4 text-center">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-4xl font-bold text-gray-800 mb-8">Why choose us?</h2>

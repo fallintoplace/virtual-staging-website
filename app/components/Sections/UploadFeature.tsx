@@ -69,7 +69,7 @@ const ImageUpload: React.FC = () => {
     
 
     return (
-        <main className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-green-50 to-red-100 px-4 py-10">
+        <main className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-blue-50 to-red-100 px-4 py-10">
             <div className="w-full max-w-7xl mx-auto">
                 <div className="bg-white p-6 md:p-12 rounded-3xl shadow-2xl flex md:flex-row flex-col gap-10">
                     <GalleryGrid />

@@ -12,9 +12,8 @@ const HomePage: React.FC = () => {
     return (
         <>
             <Main/>
-
-            <Usp/>
             <UploadFeature/>
+            <Usp/>
             <TrustedCompanies/>
 
 
