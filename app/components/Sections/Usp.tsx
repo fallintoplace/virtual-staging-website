@@ -18,7 +18,7 @@ const Usp: React.FC = () => {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                             {/* Card 1 */}
-                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 hover:-translate-y-1 transition duration-300">
+                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-600 hover:-translate-y-1 transition duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Lowest price</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
                             Starting at only <span className="font-bold text-green-600">$12/month</span> you can virtually stage 6 images. That&#39; cheaper than what most agencies charge for a single image. Enterprise plans go as low as $0.25 per staged picture.
@@ -26,20 +26,20 @@ const Usp: React.FC = () => {
                             </div>
 
                             {/* Card 2 */}
-                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 hover:-translate-y-1 transition duration-300">
+                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-600 hover:-translate-y-1 transition duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Fastest turnaround</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
                         Thanks to our advanced artificial intelligence you get your virtually staged pictures <span className="font-bold text-green-600">within 10 seconds</span>. No more waiting for designers.
                                 </p>
                             </div>
                             {/* Card 3 */}
-                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 hover:-translate-y-1 transition duration-300">
+                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-600 hover:-translate-y-1 transition duration-300">
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Decluttering included</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
                         If the rooms in your images are not entirely empty, we will <span className="font-bold text-green-600">remove existing furniture or clutter</span> for free. You&#39;ll receive both the decluttered image of the empty room and the staged image of the room.                        </p>
                             </div>
                             {/* Card 4 */}
-                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-200 hover:-translate-y-1 transition duration-300">
+                            <div className="p-4 bg-white rounded-lg shadow dark:bg-gray-800 border-2 border-transparent hover:border-green-600 hover:-translate-y-1 transition duration-300">
 
                                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Unlimited revisions</h3>
                                 <p className="text-gray-600 dark:text-gray-400">
